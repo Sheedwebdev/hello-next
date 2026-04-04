@@ -1,13 +1,20 @@
+// 'use client';
 import React from 'react';
 
 import './styles.css';
 
 function RootLayout({ children }) {
+  console.log('Layout rendered')
+  const timeStamp = new Date().toLocaleString();
+  
   return (
     <html lang="en">
       <body>
         {children}
-
+        <footer>
+          Page Rendered on{' '}
+          {timeStamp}
+        </footer>
       </body>
     </html>
   );
